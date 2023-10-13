@@ -123,9 +123,10 @@ const SendTransaction: React.FC = () => {
                                     validation={{
                                         required: 'Sender is required',
                                         minLength: {
-                                          value: 42,
-                                          message: 'Sender address must be 42 characters long'
-                                      }
+                                            value: 42,
+                                            message:
+                                                'Sender address must be 42 characters long',
+                                        },
                                     }}
                                     errors={errors}
                                 />
@@ -138,9 +139,10 @@ const SendTransaction: React.FC = () => {
                                     validation={{
                                         required: 'Recipient is required',
                                         minLength: {
-                                          value: 42,
-                                          message: 'Recipient address must be 42 characters long'
-                                      }
+                                            value: 42,
+                                            message:
+                                                'Recipient address must be 42 characters long',
+                                        },
                                     }}
                                     errors={errors}
                                 />
@@ -177,6 +179,12 @@ const SendTransaction: React.FC = () => {
                                     Send
                                 </button>
                             </div>
+                            {transactionStatus === 'failure' && (
+                                <div className='text-red-600 mb-3'>
+                                    Transaction failed. Please check your inputs
+                                    and try again.
+                                </div>
+                            )}
                         </div>
                     </div>
                 </div>

@@ -19,7 +19,7 @@ const InputField: React.FC<InputFieldProps> = ({
     validation,
     errors,
 }) => {
-    console.log(errors)
+
     return (
         <>
             <label
