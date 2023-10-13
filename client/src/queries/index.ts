@@ -1,5 +1,6 @@
 import { gql } from '@apollo/client';
 
+// Bug 1 - Schema vs Query Mismatch regarding the receipt field
 export const GetAllTransactions = gql`
   query GetAllTransactions {
     getAllTransactions {
@@ -11,7 +12,6 @@ export const GetAllTransactions = gql`
       data
       chainId
       hash
-      receipt
     }
   }
 `;
